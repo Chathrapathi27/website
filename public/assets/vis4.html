@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Humidity vs NO₂ Impact</title>
+
+  <style>
+    /* MATCH YOUR APP */
+    body {
+      margin: 0;
+      background: #020617;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .viz-wrapper {
+      padding: 20px;
+    }
+
+    .viz-container {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    .tableauViz {
+      width: 100% !important;
+      height: 650px !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="viz-wrapper">
+    <div class="viz-container">
+
+      <div class="tableauPlaceholder" id="viz1776112119413" style="position: relative">
+
+        <noscript>
+          <a href="#">
+            <img
+              alt="Impact of Humidity on NO₂ Levels and Health Severity"
+              src="https://public.tableau.com/static/images/Pr/Project_2_17761121026150/Sheet1/1_rss.png"
+              style="border: none"
+            />
+          </a>
+        </noscript>
+
+        <object class="tableauViz">
+          <param name="host_url" value="https://public.tableau.com/" />
+          <param name="embed_code_version" value="3" />
+          <param name="name" value="Project_2_17761121026150/Sheet1" />
+          <param name="tabs" value="no" />
+          <param name="toolbar" value="yes" />
+        </object>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    var divElement = document.getElementById('viz1776112119413');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+
+    vizElement.style.width = '100%';
+    vizElement.style.height = '650px';
+
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+
+</body>
+</html>

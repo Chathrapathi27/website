@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Observable Visualization</title>
+
+  <!-- Observable CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+
+  <style>
+    /* MATCH YOUR APP THEME */
+    body {
+      margin: 0;
+      background: #020617;
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+
+    .viz-wrapper {
+      padding: 20px;
+    }
+
+    .viz-container {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 20px;
+
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    #observablehq-chart-0263da16 {
+      width: 100%;
+      min-height: 600px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="viz-wrapper">
+    <div class="viz-container">
+
+      <!-- CHART -->
+      <div id="observablehq-chart-0263da16"></div>
+
+    </div>
+  </div>
+
+  <!-- OBSERVABLE SCRIPT -->
+  <script type="module">
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/79f8b3773d143f2d.js?v=4";
+
+    new Runtime().module(define, name => {
+      if (name === "chart") {
+        return new Inspector(
+          document.querySelector("#observablehq-chart-0263da16")
+        );
+      }
+    });
+  </script>
+
+</body>
+</html>

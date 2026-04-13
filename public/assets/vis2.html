@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bad Air Days vs Health Risk</title>
+
+  <!-- Observable CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+
+  <style>
+    body {
+      margin: 0;
+      background: #020617;
+      font-family: 'Inter', sans-serif;
+      color: black;
+    }
+
+    .viz-wrapper {
+      padding: 20px;
+    }
+
+    .viz-container {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    #observablehq-chart-fee5b73f {
+      width: 100%;
+      min-height: 600px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="viz-wrapper">
+    <div class="viz-container">
+
+      <div id="observablehq-chart-fee5b73f"></div>
+
+    </div>
+  </div>
+
+  <script type="module">
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/688f47a55854971a@24.js?v=4";
+
+    new Runtime().module(define, name => {
+      if (name === "chart") {
+        return new Inspector(
+          document.querySelector("#observablehq-chart-fee5b73f")
+        );
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -7,14 +7,14 @@ function Home() {
   const [filters, setFilters] = useState({});
 
   const visualizations = [
-    { id: "vis1", title: "CO vs Health Risk" },
-    { id: "vis2", title: "Weekend Recovery (Violin)" },
-    { id: "vis3", title: "Calendar Heatmap" },
-    { id: "vis4", title: "Humidity vs NO2" },
-    { id: "vis5", title: "Correlation Heatmap" },
-    { id: "vis6", title: "3D Surface Plot" },
-    { id: "vis7", title: "Seasonal Area Chart" },
-    { id: "vis8", title: "Regression Plot" },
+    { id: "vis1", title: "Daily Max CO vs. Health Risk Score" },
+    { id: "vis2", title: "Seasonal NO₂ Exposure & Health Risk Calendar" },
+    { id: "vis3", title: "Temp + Benzene vs. Health Risk" },
+    { id: "vis4", title: "Humidity vs NO₂ Impact" },
+    { id: "vis5", title: "Pollution Baseline vs. Respiratory Events" },
+    { id: "vis6", title: "Weekend Recovery Effect" },
+    { id: "vis7", title: "Pollutant Clusters to Specific Symptoms" },
+    { id: "vis8", title: "Proxy Pollutant NO₂ vs. Health Risk Score" },
     { id: "vis9", title: "Network Graph" },
   ];
 

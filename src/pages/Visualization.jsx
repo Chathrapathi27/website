@@ -5,33 +5,33 @@ function Visualization() {
 
   const content = {
     vis1: {
-      title: "CO vs Health Risk",
+      title: "Daily Max CO vs. Health Risk Score",
 
-      tool: "This visualization was developed using Plotly and integrates merged environmental and health datasets. CO levels are mapped against daily Health Risk Scores to identify direct relationships between pollution exposure and medical impact.",
+      tool: "This visualization uses Tableau to map daily average CO concentration (CO GT) and Health Risk Score across a temporal axis (Day of Date). CO levels act as a proxy for traffic-related air pollution, while the health risk score aggregates exposure effects from multiple pollutants and environmental factors. The dual-variable mapping enables direct temporal comparison between pollution intensity and health outcomes.",
 
       mechanics:
-        "A dual-axis approach is used to compare two variables over time. The X-axis represents time progression, while Y-axes represent CO concentration and Health Risk Score. Hover interactions allow detailed inspection of specific data points.",
+        "The chart employs a dual-axis line structure, with CO concentration plotted on the primary y-axis and health risk score on the secondary y-axis. Both variables are encoded as continuous lines over the same time axis, allowing synchronized trend analysis. This structure highlights co-movements, divergences, and temporal lag effects between pollution spikes and health responses.",
 
       insight:
-        "A strong positive correlation is observed where peaks in CO emissions align closely with spikes in health risk. This indicates that traffic-related pollution has an immediate and measurable effect on public health.",
+        "Periods of elevated CO levels generally align with increases in health risk scores, indicating a positive correlation between traffic emissions and adverse health conditions. Notably, sharp fluctuations in CO are often followed by corresponding shifts in health risk, suggesting short-term exposure effects. Instances where CO drops significantly coincide with reduced or stabilized health risk, reinforcing the causal linkage. The data supports the hypothesis that daily pollution timing influences acute health variability.",
 
       impact:
-        "This insight suggests that reducing vehicular emissions during peak hours could significantly lower acute health risks, enabling better urban planning and public health preparedness.",
+        "This pattern demonstrates that peak traffic emissions have immediate and measurable impacts on public health risk. It underscores the importance of managing high-emission time windows, such as rush hours, to mitigate short-term health effects. Policymakers can leverage this insight to implement dynamic traffic controls or emission reduction strategies during critical periods. Ultimately, aligning urban mobility planning with health data can reduce pollution-driven health incidents.",
     },
 
     vis2: {
-      title: "Weekend Recovery Effect",
+      title: "Seasonal NO₂ Exposure & Health Risk Calendar",
 
-      tool: "This violin plot was created using Plotly to visualize the distribution of severity scores across weekdays and weekends using aggregated health data.",
+      tool: "This D3.js calendar heatmap maps the Date variable onto a monthly grid structure, preserving temporal continuity across weeks and days. NO₂ (GT) concentrations are encoded as a continuous color scale to represent pollution intensity, while Health Risk Score (or hospital admissions) is embedded numerically within each cell and expanded via tooltips. The design integrates environmental exposure with health outcomes at a daily granularity.",
 
       mechanics:
-        "The violin shape represents the distribution density of severity scores. Wider sections indicate higher frequency of occurrences, allowing comparison between weekday and weekend patterns.",
+        "Each cell represents a single day, arranged in a calendar format (rows as weeks, columns as weekdays), enabling intuitive temporal scanning. Color intensity encodes NO₂ levels, with darker shades indicating higher pollution, while overlaid numeric labels provide immediate access to health risk magnitude. Interactive tooltips enhance detail-on-demand, allowing users to inspect exact values and contextual relationships.",
 
       insight:
-        "Weekdays show higher severity levels, while weekends demonstrate a compressed distribution, indicating reduced health risk. This confirms a correlation between human activity and pollution exposure.",
+        "Clusters of high-intensity color reveal sustained periods of elevated NO₂, often aligning with higher embedded health risk values. These “hot weeks” indicate temporal accumulation effects, where prolonged exposure amplifies respiratory health impacts. The co-location of darker cells and higher scores suggests a strong positive correlation between NO₂ concentration and hospital-related outcomes. Temporal clustering further implies that health effects are not isolated but persist across consecutive days of exposure.",
 
       impact:
-        "This pattern highlights the importance of traffic control policies and suggests that reducing weekday emissions could replicate the natural recovery observed during weekends.",
+        "Identifying peak pollution weeks enables proactive public health interventions, such as issuing air quality alerts or mobilizing healthcare resources. The visualization supports policy decisions targeting seasonal emission patterns, including traffic regulation or industrial controls during high-risk periods. For individuals, it provides actionable awareness of when exposure risks are highest. Ultimately, it reinforces the importance of continuous environmental monitoring in mitigating long-term respiratory health burdens.",
     },
     vis6: {
       title: "Weekend Recovery Effect",
