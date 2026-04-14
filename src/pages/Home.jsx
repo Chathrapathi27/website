@@ -15,7 +15,7 @@ function Home() {
     { id: "vis6", title: "Weekend Recovery Effect" },
     { id: "vis7", title: "Pollutant Clusters to Specific Symptoms" },
     { id: "vis8", title: "Proxy Pollutant NO₂ vs. Health Risk Score" },
-    { id: "vis9", title: "Network Graph" },
+    { id: "vis9", title: "Smog Days vs. Normal Days Health Impact" },
   ];
 
   return (
